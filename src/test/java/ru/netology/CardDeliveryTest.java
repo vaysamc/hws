@@ -1,13 +1,14 @@
 package ru.netology;
 
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.time.LocalDate;
@@ -65,7 +66,7 @@ public class CardDeliveryTest {
         WebElement submitButton = driver.findElement(By.cssSelector("[data-test-id=submit]"));
         submitButton.click();
 
-        // проверка 
+        // проверка
         WebElement successNotification = driver.findElement(By.cssSelector("[data-test-id=success-notification]"));
         assertTrue(successNotification.isDisplayed(), "Уведомление об успешной отправке не отображается");
     }
