@@ -36,7 +36,6 @@ public class CardDeliveryTest {
 
         $("[data-test-id=agreement]").click();
 
-        $("[data-test-id=submit]").click();
 
         $("[data-test-id=success-notification]").shouldHave(Condition.text("Встреча успешно забронирована на "
                 + date), Duration.ofSeconds(15));
