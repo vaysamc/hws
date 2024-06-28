@@ -36,7 +36,7 @@ public class CardDeliveryTest {
 
         $("[data-test-id=agreement]").click();
 
-        $("contains(text(), 'Забронировать')]//ancestor::button").click();
+        $("button.button").click();
 
         $("[data-test-id=success-notification]").shouldHave(Condition.text("Встреча успешно забронирована на "
                 + date), Duration.ofSeconds(15));
