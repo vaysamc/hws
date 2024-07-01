@@ -38,7 +38,8 @@ public class CardDeliveryTest {
 
         $("button.button").click();
 
-        $("[data-test-id=success-notification]").shouldHave(Condition.text("Встреча успешно забронирована на "
-                + date), Duration.ofSeconds(15));
+        $("[.notification__content]").shouldBe(Condition.visible, Duration.ofSeconds(15))
+                .shouldHave(Condition.text("Встреча успешно забронированна на" + date.format(formatter) ));
+
     }
 }
